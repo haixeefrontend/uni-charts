@@ -3,7 +3,7 @@ import * as echarts from 'echarts/core'
 
 import UniCanvas from './uni-canvas'
 
-import type { EChartsOption } from 'echarts'
+import type { ECBasicOption } from 'echarts/types/dist/shared'
 
 defineOptions({
   name: 'EchartsCanvas',
@@ -11,7 +11,7 @@ defineOptions({
 
 const props = defineProps({
   option: {
-    type: Object as PropType<EChartsOption>,
+    type: Object as PropType<ECBasicOption>,
     default: () => ({}),
   },
 })
@@ -60,15 +60,11 @@ watch(
 </script>
 
 <template>
-  <view
-    :style="{ width: '100%', height: '300rpx' }"
-  >
-    <canvas
-      :id="canvasId"
-      :canvas-id="canvasId"
-      style="width: 100%; height: 100%;"
-    />
-  </view>
+  <canvas
+    :id="canvasId"
+    :canvas-id="canvasId"
+    style="width: 100%; height: 100%;"
+  />
 </template>
 
 <style lang="scss" scoped></style>

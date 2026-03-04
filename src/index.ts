@@ -1,5 +1,5 @@
-import EChartCanvas from './canvas'
+import EChartsCanvas from './canvas'
 
 export * from './canvas'
 
-export default EChartCanvas
+export default EChartsCanvas
