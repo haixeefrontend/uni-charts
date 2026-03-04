@@ -2306,6 +2306,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@haixee/uni-charts@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@haixee/uni-charts@workspace:."
+  dependencies:
+    "@dcloudio/types": "npm:^3.4.28"
+    "@dcloudio/uni-app": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-app-harmony": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-app-plus": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-automator": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-cli-shared": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-components": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-h5": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-alipay": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-baidu": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-harmony": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-jd": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-kuaishou": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-lark": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-qq": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-toutiao": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-weixin": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-mp-xhs": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-quickapp-webview": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-stacktracey": "npm:3.0.0-4070620250821001"
+    "@dcloudio/uni-ui": "npm:^1.5.11"
+    "@dcloudio/vite-plugin-uni": "npm:3.0.0-4070620250821001"
+    "@haixee/unocss-preset": "npm:^0.0.11"
+    "@types/node": "npm:~22"
+    "@uni-helper/uni-types": "npm:^1.0.0-alpha.7"
+    "@vue/tsconfig": "npm:^0.9.0"
+    echarts: "npm:^6.0.0"
+    miniprogram-api-typings: "npm:^4.1.2"
+    typescript: "npm:~5.5.0"
+    unocss: "npm:~0.65.0"
+    unocss-preset-scrollbar: "npm:^3.2.0"
+    unplugin-auto-import: "npm:^20.2.0"
+    vite: "npm:^7.2.2"
+    vite-plugin-dts: "npm:^4.5.4"
+    vue: "npm:^3.5.29"
+    vue-tsc: "npm:^3.1.3"
+  peerDependencies:
+    echarts: ^6.0.0
+  languageName: unknown
+  linkType: soft
+
 "@haixee/unocss-preset@npm:^0.0.11":
   version: 0.0.11
   resolution: "@haixee/unocss-preset@npm:0.0.11"
@@ -7690,51 +7735,6 @@ __metadata:
   checksum: 10/ec8f41aa4359d50f9b59fa61fe3efce3477cc681908c8f84354d8567bb3701fafdddf36ef6bff307024d3feb42c837cf6f670314ba37fc8145e219560e473d14
   languageName: node
   linkType: hard
-
-"uni-charts@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "uni-charts@workspace:."
-  dependencies:
-    "@dcloudio/types": "npm:^3.4.28"
-    "@dcloudio/uni-app": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-app-harmony": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-app-plus": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-automator": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-cli-shared": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-components": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-h5": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-alipay": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-baidu": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-harmony": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-jd": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-kuaishou": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-lark": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-qq": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-toutiao": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-weixin": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-mp-xhs": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-quickapp-webview": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-stacktracey": "npm:3.0.0-4070620250821001"
-    "@dcloudio/uni-ui": "npm:^1.5.11"
-    "@dcloudio/vite-plugin-uni": "npm:3.0.0-4070620250821001"
-    "@haixee/unocss-preset": "npm:^0.0.11"
-    "@types/node": "npm:~22"
-    "@uni-helper/uni-types": "npm:^1.0.0-alpha.7"
-    "@vue/tsconfig": "npm:^0.9.0"
-    echarts: "npm:^6.0.0"
-    miniprogram-api-typings: "npm:^4.1.2"
-    typescript: "npm:~5.5.0"
-    unocss: "npm:~0.65.0"
-    unocss-preset-scrollbar: "npm:^3.2.0"
-    unplugin-auto-import: "npm:^20.2.0"
-    vite: "npm:^7.2.2"
-    vite-plugin-dts: "npm:^4.5.4"
-    vue: "npm:^3.5.29"
-    vue-tsc: "npm:^3.1.3"
-  peerDependencies:
-    echarts: ^6.0.0
-  languageName: unknown
-  linkType: soft
 
 "unicode-canonical-property-names-ecmascript@npm:^2.0.0":
   version: 2.0.1
