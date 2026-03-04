@@ -1,0 +1,58 @@
+{
+  "name": "uni-charts",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "packageManager": "yarn@4.9.4",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "uni",
+    "build": "vite build",
+    "check": "vue-tsc",
+    "preview": "vite preview",
+    "prepack": "yarn build"
+  },
+  "peerDependencies": {
+    "echarts": "^6.0.0"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.28",
+    "@dcloudio/uni-app": "3.0.0-4070620250821001",
+    "@dcloudio/uni-app-harmony": "3.0.0-4070620250821001",
+    "@dcloudio/uni-app-plus": "3.0.0-4070620250821001",
+    "@dcloudio/uni-automator": "3.0.0-4070620250821001",
+    "@dcloudio/uni-cli-shared": "3.0.0-4070620250821001",
+    "@dcloudio/uni-components": "3.0.0-4070620250821001",
+    "@dcloudio/uni-h5": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-alipay": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-baidu": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-harmony": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-jd": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-kuaishou": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-lark": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-qq": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-toutiao": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-4070620250821001",
+    "@dcloudio/uni-mp-xhs": "3.0.0-4070620250821001",
+    "@dcloudio/uni-quickapp-webview": "3.0.0-4070620250821001",
+    "@dcloudio/uni-stacktracey": "3.0.0-4070620250821001",
+    "@dcloudio/uni-ui": "^1.5.11",
+    "@dcloudio/vite-plugin-uni": "3.0.0-4070620250821001",
+    "@haixee/unocss-preset": "^0.0.11",
+    "@types/node": "~22",
+    "@uni-helper/uni-types": "^1.0.0-alpha.7",
+    "@vue/tsconfig": "^0.9.0",
+    "echarts": "^6.0.0",
+    "miniprogram-api-typings": "^4.1.2",
+    "typescript": "~5.5.0",
+    "unocss": "~0.65.0",
+    "unocss-preset-scrollbar": "^3.2.0",
+    "unplugin-auto-import": "^20.2.0",
+    "vite": "^7.2.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.29",
+    "vue-tsc": "^3.1.3"
+  }
+}

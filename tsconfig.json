@@ -1,0 +1,24 @@
+{
+  "extends": ["@vue/tsconfig/tsconfig.json"],
+  "compilerOptions": {
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "lib": ["esnext", "dom"],
+    "allowJs": true,
+    "types": [
+      "vite/client",
+      "@dcloudio/types",
+      "miniprogram-api-typings",
+      "@uni-helper/uni-types",
+      "./auto-imports.d.ts",
+    ]
+  },
+  "vueCompilerOptions": {
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./vite-env.d.ts"],
+  "references": [{ "path": "tsconfig.node.json" }]
+}

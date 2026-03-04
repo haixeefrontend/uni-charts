@@ -1,0 +1,91 @@
+{
+  "files.associations": {
+    "manifest.json": "jsonc",
+    "pages.json": "jsonc",
+    ".vscode/**/*.json": "jsonc"
+  },
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "yarn.lock": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "tsconfig.base.json": "tsconfig.base.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, .editorconfig, .eslintrc*, eslint.config.*, .eslintcache, .prettierrc, .prettierignore, .stylelintrc, .stylelintcache, .markdownlint.*",
+    ".yarnrc.yml": ".pnp.*",
+    ".gitignore": ".gitkeep, .gitattributes, .gitmodules",
+    ".env": ".env.*"
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "git.allowForcePush": true,
+  "git.allowNoVerifyCommit": true,
+  "npm.packageManager": "yarn",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "postcss",
+    "scss",
+    "sass",
+    "vue"
+  ],
+  "stylelint.configFile": ".stylelintrc",
+  "unocss.root": [
+    "./",
+  ],
+  "eslint.workingDirectories": [
+    "./",
+  ],
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "json",
+    "html",
+  ],
+  "eslint.options": {
+    "cache": true,
+  },
+  "editor.tabSize": 4,
+  "[vue]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    },
+    "editor.tabSize": 2
+  },
+  "vite.buildCommand": "yarn build:h5",
+  "vite.devCommand": "yarn dev:h5",
+  "vite.port": 5173,
+  "vite.browserType": "system",
+  "i18n-ally.localesPaths": [],
+}
