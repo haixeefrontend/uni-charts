@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, ref, onMounted, watch, getCurrentInstance } from 'vue'
+import { ref, onMounted, watch, getCurrentInstance } from 'vue'
 import * as echarts from 'echarts/core'
 import { LegendComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -33,7 +33,6 @@ const myChart = ref<echarts.EChartsType>()
 echarts.use([CanvasRenderer, LegendComponent])
 emit('init', echarts)
 onMounted(async () => {
-  await nextTick()
   canvas.value = new UniCanvas(
     uni.createCanvasContext(
       canvasId,
