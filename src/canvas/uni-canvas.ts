@@ -1,3 +1,6 @@
+// import * as zrender from 'zrender'
+import type { ECharts } from 'echarts'
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type UniCanvasContext = ReturnType<typeof uni.createCanvasContext> & {
   createRadialGradient?: (x0: number, y0: number, r0: number, x1: number, y1: number, r1: number) => CanvasGradient
@@ -6,7 +9,7 @@ type UniCanvasContext = ReturnType<typeof uni.createCanvasContext> & {
 export default class UniCanvas {
   ctx: UniCanvasContext
   canvasId: string
-  chart: any
+  chart: ECharts | null
   canvasNode?: HTMLCanvasElement | null
   event: Record<string, (e: any) => void> = {}
   constructor(ctx: UniCanvasContext, canvasId: string) {
@@ -24,18 +27,16 @@ export default class UniCanvas {
 
   getContext(contextType: string) {
     if (contextType === '2d') {
-      return this.ctx
+      return new Proxy(this.ctx, {
+        get: (target, prop) => {
+          if (prop === 'dpr') {
+            return window ? 1 : (uni.getSystemInfoSync().devicePixelRatio || 1)
+          }
+          return Reflect.get(target, prop)
+        },
+      })
     }
   }
-
-  /*
-   * canvasToTempFilePath(opt) {
-   *   if (!opt.canvasId) {
-   *     opt.canvasId = this.canvasId;
-   *   }
-   *   return wx.canvasToTempFilePath(opt, this);
-   * }
-   */
 
   setChart(chart: any) {
     this.chart = chart
@@ -82,23 +83,28 @@ export default class UniCanvas {
 
   _initEvent() {
     this.event = {}
-    const eventNames = [{
-      wxName: 'touchStart',
-      ecName: 'mousedown',
-    }, {
-      wxName: 'touchMove',
-      ecName: 'mousemove',
-    }, {
-      wxName: 'touchEnd',
-      ecName: 'mouseup',
-    }, {
-      wxName: 'touchEnd',
-      ecName: 'click',
-    }]
+    const eventNames = [
+      {
+        wxName: 'touchStart',
+        ecName: 'mousedown',
+      },
+      {
+        wxName: 'touchMove',
+        ecName: 'mousemove',
+      },
+      {
+        wxName: 'touchEnd',
+        ecName: 'mouseup',
+      },
+      {
+        wxName: 'tap',
+        ecName: 'click',
+      },
+    ] as const
     eventNames.forEach((name) => {
       this.event[name.wxName] = (e) => {
         const touch = e.touches[0]
-        this.chart.getZr().handler.dispatch(name.ecName, {
+        this.chart?.getZr().handler.dispatch(name.ecName, {
           zrX: name.wxName === 'tap' ? touch.clientX : touch.x,
           zrY: name.wxName === 'tap' ? touch.clientY : touch.y,
           preventDefault: () => {},

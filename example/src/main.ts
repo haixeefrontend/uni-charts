@@ -1,13 +1,12 @@
 import { createSSRApp } from 'vue'
 
 // import 'virtual:uno.css'
-import src from '.'
-
 import App from './App.vue'
+import EchartsCanvas from '@haixee/uni-charts'
 
 export function createApp() {
   const app = createSSRApp(App)
-    .use(src)
+    .use(EchartsCanvas)
 
   return { app }
 }

@@ -1,40 +1,11 @@
 {
-  "name": "@haixee/uni-charts",
-  "private": true,
-  "version": "0.0.1",
-  "type": "module",
+  "name": "example",
   "packageManager": "yarn@4.9.4",
-  "types": "dist/index.d.ts",
-  "module": "dist/index.mjs",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.cjs"
-    },
-    "./package.json": "./package.json"
-  },
-  "files": [
-    "dist",
-    "src",
-    "!src/pages",
-    "!src/App.vue",
-    "!src/main.ts",
-    "!src/manifest.json",
-    "!src/pages.json"
-  ],
   "scripts": {
     "dev": "uni",
-    "build": "vite build",
-    "check": "vue-tsc",
-    "preview": "vite preview",
-    "prepack": "yarn build"
+    "build": "uni build"
   },
-  "peerDependencies": {
-    "echarts": "^6.0.0"
-  },
-  "devDependencies": {
+  "dependencies": {
     "@dcloudio/types": "^3.4.28",
     "@dcloudio/uni-app": "3.0.0-4070620250821001",
     "@dcloudio/uni-app-harmony": "3.0.0-4070620250821001",
@@ -57,6 +28,7 @@
     "@dcloudio/uni-stacktracey": "3.0.0-4070620250821001",
     "@dcloudio/uni-ui": "^1.5.11",
     "@dcloudio/vite-plugin-uni": "3.0.0-4070620250821001",
+    "@haixee/uni-charts": "link:../",
     "@haixee/unocss-preset": "^0.0.11",
     "@types/node": "~22",
     "@uni-helper/uni-types": "^1.0.0-alpha.7",

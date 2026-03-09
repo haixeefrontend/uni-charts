@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { onShow } from '@dcloudio/uni-app'
 import { PieChart } from 'echarts/charts'
+// import { EchartsCanvas } from '@haixee/uni-charts'
 import { TooltipComponent, LegendComponent } from 'echarts/components'
 import { LabelLayout } from 'echarts/features'
-import { CanvasRenderer } from 'echarts/renderers'
 
 import type * as ECCharts from 'echarts/charts'
 import type * as ECComponents from 'echarts/components'
@@ -17,7 +18,6 @@ function onInit(echarts: typeof import('echarts/core')) {
     TooltipComponent,
     LegendComponent,
     PieChart,
-    CanvasRenderer,
     LabelLayout,
   ])
 }
@@ -84,12 +84,22 @@ const option = reactive(getOption())
 function refresh() {
   Object.assign(option, getOption())
 }
+
+const vm = (() => {
+  const vm = ref(getCurrentInstance()?.proxy)
+  onShow(() => {
+    vm.value = getCurrentInstance()?.proxy
+  })
+  return vm
+})()
 </script>
 
 <template>
-  <echarts-canvas @init="onInit" :option="option"></echarts-canvas>
-  <pre class="text-xs">{{ JSON.stringify(option.series?.[0]?.data, null, 2) }}</pre>
-  <button @click="refresh">refresh</button>
+  <view>
+    <echarts-canvas class="w-screen h-400rpx" :vm="vm" @init="onInit" :option="option"></echarts-canvas>
+    <button @click="refresh">refresh</button>
+    <pre class="text-xs">{{ JSON.stringify(option.series?.[0]?.data, null, 2) }}</pre>
+  </view>
 </template>
 
 <style lang="scss" scoped></style>
