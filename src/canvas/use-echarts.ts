@@ -34,7 +34,7 @@ export interface UseEChartsOptions {
  */
 export function useECharts(option: UseEChartsOptions) {
   const opt = {
-    devicePixelRatio: window ? 1 : (uni.getSystemInfoSync().devicePixelRatio || 1),
+    devicePixelRatio: window ? 1 : 1, // uni.getSystemInfoSync().devicePixelRatio || 1
     ...option,
   }
   onMounted(() => {

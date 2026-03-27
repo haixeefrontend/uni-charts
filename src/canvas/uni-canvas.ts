@@ -30,7 +30,7 @@ export default class UniCanvas {
       return new Proxy(this.ctx, {
         get: (target, prop) => {
           if (prop === 'dpr') {
-            return window ? 1 : (uni.getSystemInfoSync().devicePixelRatio || 1)
+            return window ? 1 : 1 // uni.getSystemInfoSync().devicePixelRatio || 1
           }
           return Reflect.get(target, prop)
         },
